@@ -24,7 +24,7 @@ function success(position) {
                 .then(data => {
                     console.log(data["weather"][0]["main"]);
                     weather = data["weather"][0]["main"]
-                    tag.innerText = `${weather}  / ${data.main.temp} /  ${city} / ${country}`
+                    tag.innerText = `${weather} /  ${city} / ${country}`
                 })
         })
 
