@@ -12,14 +12,14 @@ function success(position) {
     console.log(longitude);
     //tag.innerText =
     //status.textContent = '';
-    fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${key}`)
+    fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${key}`)
         .then(response => response.json())
         .then(data => {
             //console.log(data);
             city = data[0]["name"];
             country = data[0]["country"]
             console.log(city);
-            fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`)
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`)
                 .then(response => response.json())
                 .then(data => {
                     console.log(data["weather"][0]["main"]);
